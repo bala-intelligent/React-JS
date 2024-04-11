@@ -1,0 +1,25 @@
+const parent = React.createElement('div', { id: "parent" }, 
+[React.createElement('div', { id: "child" }, 
+[React.createElement("h1", { id: "heading-first" }, "I'am the First Heading"), 
+React.createElement('h2', { id: "h2" }, "I'am the second Heading")]),
+
+React.createElement('div', { id: "child2" }, 
+[React.createElement("h1", { id: "heading-first2" }, "I'am the second child Heading"), 
+React.createElement('h2', { id: "h2-2" }, "I'am the second child Heading")])
+]);
+
+
+//const heading = React.createElement('h1', { id: "heading" }, "Bala's ReactJS From Scratch");
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent);
+
+
+React.createElement() - creates a element in Browser as a Object with parameters ('element eg.'div'',{attributes of the html element eg. id = 'parent'},[if we want add child elements or innerHTML we have to use Square braces]
+
+ReactDOM.createRoot() - Used to specify a root element where we are wanting to place our parent element by querying the dom object and parameter holds the root element's ID
+
+ReactDOM.render() - renders the parent element into the root element and Parameter holds parent object DOM
+
+Package.JSON - its a configuration for NPM, NPM is a package manager which manages packages and this file is also called as Dependencies, NPM manages the version of packages in the package.json file.
+
+Bundler - Minify, compresses project eg. of bundlers wheat,webpack, parcel, Packages our project so that it can be shifted to productions
